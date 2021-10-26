@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+	    android:layout_height="65dp"
+	    android:background="@drawable/steptwo"
+	    android:orientation="horizontal">
+    	<ImageButton
+	    android:id="@+id/nextstep2"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:background="@xml/btn_nextstep" >
+		</ImageButton>
+</RelativeLayout>
+

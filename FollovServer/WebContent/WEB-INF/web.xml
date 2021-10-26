@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>wis</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>
+    com.follov.listener.ContextListener
+    </listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>Servlet</display-name>
+    <servlet-name>Servlet</servlet-name>
+    <servlet-class>com.follov.servlet.ActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <filter-name>checkemail</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>checkemail</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>checkemail</filter-name>
+    <url-pattern>/checkemail.do</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+    <filter-name>login</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>login</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>login</filter-name>
+    <url-pattern>/login.do</url-pattern>
+  </filter-mapping>
+  
+   <filter>
+    <filter-name>logindata</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>logindata</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>logindata</filter-name>
+    <url-pattern>/logindata.do</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>join</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>join</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>join</filter-name>
+    <url-pattern>/join.do</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>couplematching</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>couplematching</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>couplematching</filter-name>
+    <url-pattern>/couplematching.do</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>couplematchingcancel</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>couplematchingcancel</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>couplematchingcancel</filter-name>
+    <url-pattern>/couplematchingcancel.do</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>profile</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>profile</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>profile</filter-name>
+    <url-pattern>/profile.do</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description>ImageServlet</description>
+    <display-name>ImageServlet</display-name>
+    <servlet-name>ImageServlet</servlet-name>
+    <servlet-class>com.follov.servlet.ImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageServlet</servlet-name>
+    <url-pattern>/image.follov</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <filter-name>locationAction</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>locationAction</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>locationAction</filter-name>
+    <url-pattern>/locationAction.do</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>SynchronizeAction</filter-name>
+    <filter-class>com.follov.filter.ActionFilter</filter-class>
+    <init-param>
+      <param-name>action</param-name>
+      <param-value>SynchronizeAction</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>SynchronizeAction</filter-name>
+    <url-pattern>/SynchronizeAction.do</url-pattern>
+  </filter-mapping>
+   
+   
+   <servlet>
+    <description>RecentDataAction</description>
+    <display-name>RecentDataAction</display-name>
+    <servlet-name>RecentDataAction</servlet-name>
+    <servlet-class>com.follov.servlet.RecentDataAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RecentDataAction</servlet-name>
+    <url-pattern>/RecentDataAction.follov</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

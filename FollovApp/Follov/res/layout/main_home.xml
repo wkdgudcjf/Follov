@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#787878" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#515151"
+        android:gravity="center_vertical">
+       <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:orientation="vertical"
+        android:background="@xml/btn_left_list"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"/>
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/logi"
+        android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+	
+</LinearLayout>

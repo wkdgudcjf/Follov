@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko"  xml:lang="ko">
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+<head>
+<title>Redirect</title>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	var code = Page.GetParameter("access_token");
+	$("#sp1").text(code);
+});
+ 
+var Page = {
+		GetParameter: function (strParamName) {
+			var strURL = location.href;
+			var tmpParam = strURL.substring(1).split("#");
+			if (strURL.substring(1).length > 0) {
+				var Params = new Array;
+				for (var i = 0; i < tmpParam.length; i++) {
+				Params = tmpParam[i].split("=");
+				if (strParamName == Params[0]) {
+					return Params[1];
+				}
+			}
+		}
+		return "";
+	}
+}
+</script>
+</head>
+<body>
+<div>
+<p>내가 획득한 ACCESS TOKEN : <span id="sp1"></span></p>
+</div>
+</body>
+</html>

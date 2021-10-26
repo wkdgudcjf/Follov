@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+    <Button
+        android:id="@+id/showDateLog"
+        android:layout_marginTop="100dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="mOnClick"
+        android:text="데이트 기록 보기" />
+    
+    <Button
+        android:id="@+id/dbInit"
+        android:layout_marginTop="30dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="dbInit"
+        android:text="디비 파일 초기화" />
+    
+     <Button
+        android:id="@+id/droptable"
+        android:layout_marginTop="50dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="dropTable"
+        android:text="데이트 기록 삭제" />
+     
+     <Button
+        android:id="@+id/fastCycle"
+        android:layout_marginTop="30dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="mCycle"
+        android:text="fastCycle" />
+    
+     <Button
+        android:id="@+id/slowCycle"
+        android:layout_marginTop="50dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="mCycle"
+        android:text="slowCycle" />
+     
+     
+</LinearLayout>

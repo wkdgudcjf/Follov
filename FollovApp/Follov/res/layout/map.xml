@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+
+	<RelativeLayout
+	    android:id="@+id/mapbar"
+	    android:layout_width="fill_parent"
+	    android:layout_height="65dp"
+	    android:background="@drawable/mapbar"	    android:orientation="horizontal">
+		<ImageButton
+	    android:id="@+id/nextb"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:background="@xml/btn_locationnext" >
+	</ImageButton>
+		    
+	</RelativeLayout>
+
+	<RelativeLayout 
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+    <fragment 
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:name="com.google.android.gms.maps.SupportMapFragment"/>
+	
+	<ImageButton
+	    android:id="@+id/mapview_search"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/magnifier" >
+	</ImageButton>
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko"  xml:lang="ko">
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+<head>
+<title>Home</title>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	$("#btnGo").click(function () {
+		var url = 'https://foursquare.com/oauth2/authenticate';
+		url += '?client_id=CGWKFVGULD51PWGFCCHDNLKTBX2QXN15QESF33LAR42M0PY2'; //내앱정보의 Client id 정보
+		url += '&response_type=token';
+		url += '&redirect_uri=http://localhost:8080/FollovServer/foursquare_redirect/redirect.html'; //내앱정보의 Redirect URI(s) 정보
+		location.href = url;
+	});
+});
+</script>
+</head>
+<body>
+	<div>
+		<input type="button" id="btnGo" value="인증받기" />
+	</div>
+</body>
+</html>
